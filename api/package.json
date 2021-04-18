@@ -16,12 +16,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "file-system": "^2.2.2",
+    "i": "^0.3.6",
     "path": "^0.12.7",
     "pg": "^8.3.3",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.7"
   }
 }

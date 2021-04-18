@@ -58,7 +58,7 @@ function DexSelect({selecCath, pokeCatch, pokeRandoms, start, PokeSelect, StateC
         if( pokeRandoms[3 - selecCath] !== pokeCatch.name && PokeSelect ){ 
             StateCatch("error");
             Lifes(false);
-            Score({ score: -100, success: 0, fail: 1, catch: 1 });
+            Score({ score: -20, success: 0, fail: 1, catch: 1 });
         }
 
         else if( start!== 1 && !PokeSelect ){ 

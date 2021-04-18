@@ -10,8 +10,8 @@ import BackCover from "./components/BackCover";
 const useStyles = makeStyles((theme) => ({
 
     BackGround: {
-        width: "99vw",
-        height: "98vh",
+        width: "98vw",
+        height: "97vh",
         backgroundColor: "#263238",
     },
 

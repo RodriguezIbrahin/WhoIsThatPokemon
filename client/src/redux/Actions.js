@@ -18,7 +18,8 @@ export const SELECTLETTER = "SELECTLETTER";
 export const NICK = "NICK";
 export const SENDNICK = "SENDNICK";
 export const RANKING = "RANKING";
-export const POSTRANKING = "POSTRANKING"
+export const POSTRANKING = "POSTRANKING";
+export const SELECTLETTERCLICK = "SELECTLETTERCLICK"
 
 
 export function Start(payload) {
@@ -211,3 +212,11 @@ export function PostRanking(payload) {
     }
 };
 
+
+export function SelectLetterClick(payload) {
+
+    return{
+        type: SELECTLETTERCLICK,
+        payload,
+    }
+};

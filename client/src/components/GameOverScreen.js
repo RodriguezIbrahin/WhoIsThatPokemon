@@ -31,13 +31,17 @@ const useStyles = makeStyles((theme) => ({
         height: "4vh",
         border: "0.1em solid black",
         borderRadius: "0.5em",
+        cursor: "pointer",
+        '&:hover': {
+            backgroundColor: "#558b2f",
+        },
     },
 
 
 }));
 
 
-function GameOverScreen({ letterSelect, nick, sendNick, ranking }) {
+function GameOverScreen({ letterSelect, nick, sendNick, ranking, Nick , SelectLetterClick}) {
 
     const classes = useStyles();
 
@@ -64,16 +68,20 @@ function GameOverScreen({ letterSelect, nick, sendNick, ranking }) {
 
                         <Grid item container justify="center" alignItems="center" xs={10}>
 
-                            {  Alfabeto.length ? Alfabeto.map(letter => 
+                            {  Alfabeto.length ? Alfabeto.map((letter, index) => 
 
                                 <Grid 
                                    item container className={classes.Alfabeto}
+                                   onClick={() => {
+                                       Nick(index) ;
+                                       SelectLetterClick(index) ;
+                                    }}
                                    style={ Alfabeto[letterSelect] === letter ? {backgroundColor: "#558b2f"} : {}}
                                    justify="center" alignItems="center" className={classes.Alfabeto} xs={2}
                                 >
                                     {
                                        letter === "DELETE" ? <BackspaceOutlinedIcon/> :
-                                       letter === "SEND" ? <KeyboardReturnOutlinedIcon/> :letter 
+                                       letter === "SEND" ? <KeyboardReturnOutlinedIcon/> : letter 
                                     } 
 
                                 </Grid>) :

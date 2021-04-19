@@ -108,7 +108,7 @@ function BackCover({ score, start }) {
                                 <b>{"¿Quien es ese "}</b>
                             </Grid>
 
-                            <Grid item container direction="row" justify="center" alignItems="center" xs={12} sm={3}>
+                            <Grid item container direction="row" justify="center" alignItems="center" xs={12} sm={4}>
                                 <b>{"POKEMON?"}</b>
                             </Grid>
 
@@ -131,9 +131,9 @@ function BackCover({ score, start }) {
                         </Grid>
 
                     :
-                        <Grid  item className={`${classes.StepTwo} ${"pokeText"}`} container direction="row" justify="center" alignItems="flex-start" xs={9}>
+                        <Grid  item className={`${classes.StepTwo} ${"pokeText"}`} container direction="row" justify="center" alignItems="flex-start" xs={11}>
 
-                            <Grid item container direction="row" style={{marginTop: "-0.5em"}} justify="center" alignItems="center" xs={12} sm={6}>
+                            <Grid item container direction="row" style={{marginTop: "-0.5em"}} justify="center" alignItems="center" xs={12} sm={8}>
                                 <b>{"¿Quien es ese "}</b>
                             </Grid>
 

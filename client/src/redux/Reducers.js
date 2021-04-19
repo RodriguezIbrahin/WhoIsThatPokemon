@@ -1,7 +1,7 @@
 import { 
     START, POKEPUSH, POKECATCH, ERROR, POKEREVELATE, RESETPOKECATH, SELECCATH,
     POKERANDOMS, STATECATCH, POKERANDOMSRESET, SCORE, LIFES, POKERESET, SELECTLETTER,
-    NICK, SENDNICK, RANKING
+    NICK, SENDNICK, RANKING, SELECTLETTERCLICK
 } from "./Actions";
 
 const initialState = {
@@ -216,6 +216,14 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 ranking: action.payload
             }
+
+        case SELECTLETTERCLICK:
+
+            return {
+                ...state,
+                letterSelect: action.payload
+            }
+
 
         default:
 

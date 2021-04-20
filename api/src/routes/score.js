@@ -42,5 +42,25 @@ app.post('/', (req, res) => {
 
 });
 
+app.get('/all', (req, res) => {
+
+	(async function (){
+
+		try {
+
+			const Nicks = await Score.findAndCountAll();
+			
+			res.status(200).send(Nicks);
+
+		}
+		catch (err){
+
+			res.status(404).send(err)	
+
+		}
+	})()
+
+});
+
 
 module.exports = app;

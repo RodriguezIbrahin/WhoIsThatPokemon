@@ -48,7 +48,7 @@ app.get('/all', (req, res) => {
 
 		try {
 
-			const Nicks = await Score.findAndCountAll();
+			const Nicks = await Score.findAll();
 			
 			res.status(200).send(Nicks);
 

@@ -147,7 +147,7 @@ function FrontCover({
     };
 
     const handleOnStart = (e) =>{
-        audio.play();
+        if(sound){audio.play();}
         PokeRandomsReset();
         setDisable(false);
         setPokeSelect(false);
@@ -186,7 +186,7 @@ function FrontCover({
             Nick(letterSelect);
             PostRanking({nick: nick, score: score.score, catch: score.catch});
         }
-        Nick(letterSelect);
+        else Nick(letterSelect);
     };
 
 
@@ -256,9 +256,13 @@ function FrontCover({
                             <Grid item container direction="row" justify="center" alignItems="center"  xs={2}>
 
                                 <Grid 
-                                    tem container className={classes.CircleTwo} style={{backgroundColor: "red", height: "3.5vh"}} 
+                                    tem container className={classes.CircleTwo} style={{backgroundColor: "red", height: "3.5vh", cursor: "pointer"}} 
                                     direction="row" justify="center" alignItems="center" xs={6}
-                                />
+                                    onClick={() => setSound(!sound)}
+                                >
+                                    {sound ? <VolumeUpRoundedIcon fontSize='inherit'/> : <VolumeOffRoundedIcon fontSize='inherit'/> }
+                                    
+                                </Grid>
                                 
                             </Grid>
 

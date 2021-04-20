@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function GameOverScreen({ letterSelect, nick, sendNick, ranking, Nick , SelectLetterClick}) {
+function GameOverScreen({ letterSelect, nick, sendNick, ranking, Nick , SelectLetterClick, score, PostRanking}) {
 
     const classes = useStyles();
 
@@ -73,6 +73,9 @@ function GameOverScreen({ letterSelect, nick, sendNick, ranking, Nick , SelectLe
                                 <Grid 
                                    item container className={classes.Alfabeto}
                                    onClick={() => {
+                                       if( index === 27  && nick.length > 2 ){
+                                        PostRanking({nick: nick, score: score.score, catch: score.catch});
+                                       }
                                        Nick(index) ;
                                        SelectLetterClick(index) ;
                                     }}

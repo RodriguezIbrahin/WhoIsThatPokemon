@@ -146,14 +146,15 @@ function FrontCover({
         else return Poke();
     };
 
-    const handleOnStart = (e) =>{
+    const handleOnStart = async (e) =>{
+
         if(sound){audio.play();}
         PokeRandomsReset();
         setDisable(false);
         setPokeSelect(false);
         PokeRevelate(false);
         ResetPokeCath();
-        PokeCatch(Poke());
+        let newsPokes = await PokeCatch(Poke());
         setSelecte(true);
 
         let out = setTimeout(function() { 

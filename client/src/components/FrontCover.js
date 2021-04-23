@@ -131,6 +131,8 @@ function FrontCover({
 
     const [sound, setSound] = React.useState(true);
 
+    const [loading, setLoading] = React.useState(false);
+
     const audio = new Audio(PokeSound);
 
 
@@ -147,14 +149,16 @@ function FrontCover({
     };
 
     const handleOnStart = async (e) =>{
-
-        if(sound){audio.play();}
+        
+        setLoading(true)
         PokeRandomsReset();
         setDisable(false);
         setPokeSelect(false);
         PokeRevelate(false);
         ResetPokeCath();
         let newsPokes = await PokeCatch(Poke());
+        setLoading(false)
+        if(sound){audio.play();}
         setSelecte(true);
 
         let out = setTimeout(function() { 
@@ -175,6 +179,7 @@ function FrontCover({
 
     const handleReset = (e) =>{
         clearTimeout(time);
+        setLoading(false)
         setSelecte(false);
         setDisable(false);
         setPokeSelect(false);
@@ -250,7 +255,7 @@ function FrontCover({
 
                         </Grid>
 
-                        <DexScreen/>
+                        <DexScreen loading={loading} />
 
                         <Grid item container style={{marginTop: "-0.3em"}} direction="row" justify="space-between" alignItems="center"  xs={10}>
 

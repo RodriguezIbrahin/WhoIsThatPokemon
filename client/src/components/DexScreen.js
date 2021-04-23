@@ -6,6 +6,7 @@ import { Grid } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Gif from "../img/whoisthatpokemon.gif";
 import Gif2 from "../img/whoisthatpokemon2.gif";
+import Gif3 from "../img/pokeball.gif";
 import Pokemon from "../img/pokemon.png";
 import Signo from "../img/signo.png";
 import Pokeball from "../img/pokeball.png";
@@ -58,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function DexScreen({ start, pokeCatch, pokeRevelate, lifes}) {
+function DexScreen({ start, pokeCatch, pokeRevelate, lifes, loading}) {
 
     const classes = useStyles();
 
@@ -70,7 +71,7 @@ function DexScreen({ start, pokeCatch, pokeRevelate, lifes}) {
         
                 <Grid 
                     container className={classes.Screen} direction="row" justify="center" alignItems="center" xs={11}
-                    style={start === 2 && !pokeRevelate ? {backgroundImage: `url(${Gif}?a=${Math.random()})`} :
+                    style={loading ? {backgroundImage: `url(${Gif3})`, backgroundColor: "black"} : start === 2 && !pokeRevelate ? {backgroundImage: `url(${Gif}?a=${Math.random()})`} :
                     pokeRevelate ? {backgroundImage: `url(${Gif2}?a=${Math.random()})`} : { backgroundColor: "black"}}
                 >
 
@@ -89,7 +90,7 @@ function DexScreen({ start, pokeCatch, pokeRevelate, lifes}) {
 
                         <Grid 
                             item className={classes.Poke} xs={6}
-                            style={ start === 2 && !pokeRevelate ? {backgroundImage: `url(${pokeCatch.img})`, filter: "brightness(0.05)"} :
+                            style={ start === 2 && !pokeRevelate  ? {backgroundImage: `url(${pokeCatch.img})`, filter: "brightness(0.05)"} :
                             pokeRevelate ? {backgroundImage: `url(${pokeCatch.img})`, filter: "brightness(1)"} : 
                             {backgroundColor: "black"}}
                         /> 
@@ -97,8 +98,8 @@ function DexScreen({ start, pokeCatch, pokeRevelate, lifes}) {
                         <Grid item container direction="row" justify="center" alignItems="center" xs={4}>
 
                             { 
-                                start === 2 && !pokeRevelate ? <Grid item className={classes.Signo} xs={6}/> :
-                                pokeRevelate ? <Grid item container direction="row" justify="center" alignItems="center" className="pokeName" style={{marginLeft:"-2em"}} xs={12}>
+                                start === 2 && !pokeRevelate && !loading ? <Grid item className={classes.Signo} xs={6}/> :
+                                pokeRevelate && !loading ? <Grid item container direction="row" justify="center" alignItems="center" className="pokeName" style={{marginLeft:"-2em"}} xs={12}>
                                 {pokeCatch.name} 
                                 </Grid> :
                                 <div/> 
@@ -110,7 +111,7 @@ function DexScreen({ start, pokeCatch, pokeRevelate, lifes}) {
 
                     <Grid item container direction="row" justify="flex-end" alignItems="flex-start" xs={12}>
 
-                        { start !== 1 ? <Grid item className={classes.TitlePokemon} xs={8}/> : <div/>}
+                        { start !== 1 && !loading ? <Grid item className={classes.TitlePokemon} xs={8}/> : <div/>}
                 
                     </Grid>
 

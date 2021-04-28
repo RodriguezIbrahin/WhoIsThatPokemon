@@ -6,13 +6,12 @@ _Pequeño juego basado en la popular franquicia de Nintendo, haciendo referencia
 
 _<p align="center">¿Podras adivinarlos a todos?</p>_
 
-```
-:point_right: 151 POKEMON
+
+_:point_right: 151 POKEMON
 :point_right: 4 Vidas
 :point_right: +10 puntos por captura
 :point_right: -20 por error
-:point_right: Hay un RANKING! :boom::boom:
-```
+:point_right: Hay un RANKING! :boom::boom:_
 
 _<p align="center">:point_right: [ Intentalo Aqui](https://www.whoisthatpokemon.online/) :point_left:</p>_
 

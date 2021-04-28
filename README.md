@@ -8,9 +8,13 @@ _<p align="center">¿Podras adivinarlos a todos?</p>_
 
 
 :point_right: _151 POKEMON_
+
 :point_right: _4 Vidas_
+
 :point_right: _+10 puntos por captura_
+
 :point_right: _-20 por error_
+
 :point_right: _Hay un RANKING!_ :boom::boom:
 
 _<p align="center">:point_right: [ Intentalo Aqui](https://www.whoisthatpokemon.online/) :point_left:</p>_

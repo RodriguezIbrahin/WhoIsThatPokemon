@@ -21,6 +21,6 @@ _<p align="center">:point_right: [ Intentalo Aqui](https://www.whoisthatpokemon.
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_React | React-Redux | Material-UI | NodeJs | ExpressJs | Sequelize | PostgreSQL_
 
 

@@ -23,4 +23,12 @@ _<p align="center">:point_right: [ Intentalo Aqui](https://www.whoisthatpokemon.
 
 _React | React-Redux | Material-UI | NodeJs | ExpressJs | Sequelize | PostgreSQL_
 
+## Api 📖
+
+_<p align="center"> [PokeApi](https://pokeapi.co/) </p>_
+
+## Declaration 📄
+
+Todos los derechos de autor sobre POKEMON pertenencen a Nintendo
+
 

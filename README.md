@@ -25,7 +25,7 @@ _React | React-Redux | Material-UI | NodeJs | ExpressJs | Sequelize | PostgreSQL
 
 ## Api 📖
 
-_<p align="center"> [PokeApi](https://pokeapi.co/) </p>_
+_[PokeApi](https://pokeapi.co/)_
 
 ## Declaration 📄
 

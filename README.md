@@ -29,6 +29,6 @@ _[PokeApi](https://pokeapi.co/)_
 
 ## Declaration 📄
 
-Todos los derechos de autor sobre POKEMON pertenencen a Nintendo
+Todos los derechos de autor sobre POKEMON pertenecen a Nintendo
 
 
